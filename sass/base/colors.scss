@@ -1,0 +1,155 @@
+$primary-color: 			        #1CD8B6;
+$secondary-color:   	            #FFAA66;
+$tertiary-color:                    #292F36;
+$error-color:       	            #ED5065;
+$success-color:                     #50ed82;
+$failure-color:                     #edc550;
+$third-color:                       #80d8ff;
+// ----------------------------------
+// Globals
+// ----------------------------------
+
+$text-color: 				        #626262;
+$lowlight-text-color:               rgba(98, 98, 98, 0.55);
+$text-color-darker:                 #404040;
+
+$border-color:                      #B1B1B1;
+$border-color-second:               #444444;
+$border-color-third:                #dbdce2;
+$border-color-fourth:               #d4d4d4;
+$border-color-title:                #9e9e9e;
+$primary-background-color:          #FAFAFA;
+$secondary-background-color:        #ffffff;
+$thirty-bg:                         #567cb0;
+$proboknow-color:                   #F36102;
+$proboknow-color-light:             #FFC374;
+$lowboknow-color:                   #97B132;
+$lowboknow-color-light:             #C0E5A2;
+$lowboknow-color-green:             #98B221;
+$lowboknow-color-green-light:       #C6DF53;
+$lowboknow-color-green-very-light:  #F8FBE9;
+$proboknow-color-orange:            #F46101;
+$primary-link:                      #3A8FC8;
+$materialize-green:                 #26A69A;
+$title-grey:                        #4D4D4D;
+$bg-title:                          rgba(#000000,0.4);
+$bg-title-second:                   #e1e1e1;
+$bg-block:                          #282828;
+$bg-nav:                            #eeeeee;
+$bg-color-box:                      #494949;
+$bg-block-second:                   #e5e5e5;
+$bg-block-third:                    #e6e6e6;
+$bg-color-fourth:                   #6894b1;
+$bg-color-fifth:                    #c9d9e4;
+$bg-color-modal:                    #333333;
+$text-color-title:                  #ffffff;
+$text-color-second:                 #333333;
+$text-color-third:                  #000000;
+$text-color-fourth:                 #f27500;
+$text-color-fifth:                  #3c3c3c;
+$text-color-sixth:                  #163e70;
+$text-color-form:                   #000000;
+$text-color-tab:                    #888888;
+$text-disabled:                     #eeeeee;
+$text-color-modal:                  rgba(255, 255, 255, 0.87);
+$color-rate-inactive:               #cccccc;
+$email-template-color:              #ee7b2f;
+$bg-tr:                             #eeeeee;
+$bg-menu:                           #484848;
+$bg-chose-title:                    #8BA2A0;
+$bg-color-list:                     #e5ecf4;
+$placeholder-text-color:            #d1d1d1;
+$bg-grey-light:                     #B2B2B2;
+$color-disabled:                    #9F9F9F;
+$bg-disabled:                       #DFDFDF;
+
+//secondary navigation
+$bg-sec-nav-color-active:           #839831;
+$bg-sec-nav-color-default:          #303030;
+$bd-sec-nav-color:                  #3f3f3f;
+
+$bd-line:                           #FDD992;
+
+
+
+$esqalate-grey:                     #3E3E3E;
+$esqalate-orange:                   #EE8B1E;
+
+//btn
+$bg-btn:                            #f3611f;
+$bg-btn-second:                     $esqalate-grey;
+$bg-btn-third:                      #3B5998;
+$bg-btn-fourth:                     #0077B5;
+$bg-btn-fifth:                      #98b231;
+$bg-btn-sixth:                      $lowboknow-color-green;
+
+  // Login
+$li-primary-text-color:             #2C2C2C;
+
+// Footer
+$footer-text-color:                 #626262;
+
+// Minimal-Header
+$mh-logo-font-size:                 36px;
+
+// Folder colors
+$folder-green:                      #CAD698;
+$folder-green-light:                #E1E6C8;
+
+// Pb Attorney Page
+$pb-attorney-icons-border:          #81D4FA;
+
+// Lb Attorney Page
+$lb-attorney-color:                 #2d404d;
+
+// Attorney Case Filter
+$attorney-case-filter-header-bg:    #EDEDED;
+$attorney-case-filter-body-bg :     #FFFFFF;
+
+// Attorney Cases
+$attorney-cases-header-bg:          #EDEDED;
+
+//Case Card
+$case-card-border-grey:             #EDEDED;
+$actor-icon-selected-bg:            #E1E6C8;
+$remove-interest-button-red:        #E57373;
+$remove-interest-button-red-hover:  #EF9A9A;
+$share-case-send-success:           #98B221;
+$share-case-send-fail:              #E57373;
+
+// Links
+$link-color-delete:                 #E57373;
+$link-color-delete-hover:           #EF9A9A;
+$link-color-edit:                   #81D4FA;
+$link-color-edit-hover:             #B3E5FC;
+
+// New case badges
+$materialize-color-red:             #E57373;
+
+// Email templates
+
+
+// Registration
+$registration-delete-link:          #E57373;
+$registration-delete-link-hover:    #EF9A9A;
+
+// Case Submit
+$case-submit-error:                 #E57373;
+
+//progress-bar
+$progress-base:                     #fbe33e;
+
+//dashboard
+$dashboard-color:                   #81acbf;
+$dashboard-color-secondary:         #b7b7b7;
+
+// Tooltip colors
+$tooltip-bg-color:                  #323232;
+
+// Messenger
+$msgr-header-bg-color:              #0097a7;
+$msgr-font-color:                   #fff;
+$msgr-button:                       #00838f;
+$my-msgs-color:                     #00acc1;
+$other-msgs-color:                  #00897b;
+

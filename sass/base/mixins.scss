@@ -1,0 +1,186 @@
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin flexBox {
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-wrap($wrap: wrap) {
+  -webkit-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-direction ($direction: column) {
+  -webkit-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin flex-vertical-align($align: center) {
+  -webkit-align-items: $align;
+  align-items: $align;
+}
+
+@mixin flex-horizontal-align($align: space-between) {
+  -webkit-justify-content: $align;
+  justify-content: $align;
+}
+
+@mixin btn-large ($type:orange, $size:large){
+
+  height: auto;
+  line-height: 1.2;
+  @if $size == large {
+    padding: 14px 25px;
+    font-size: $fz16;
+  }
+  @if $size == medium {
+    padding: 10px 20px;
+    font-size: $fz13;
+    border-radius: 8px;
+  }
+  @if $size == small {
+    padding: 5px 20px;
+    font-size: $fz13;
+    border-radius: 8px;
+  }
+
+  @if $type == orange {
+    color: $text-color-title;
+    background-color: $proboknow-color-orange;
+    &:hover,&:focus {
+      background-color: lighten($proboknow-color-orange, 8%);
+    }
+  } @else if $type == black {
+    border:1px solid black;
+    background: none;
+    color: black;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    min-width: 190px;
+    &:hover {
+      background-color: lighten(black, 90%);
+    }
+  } @else if $type == green {
+    background-color: $bg-btn-fifth;
+    color: $text-color-title;
+    &:hover {
+      background-color: lighten($bg-btn-fifth, 8%);
+    }
+    &:focus {
+      background-color: lighten($bg-btn-fifth, 8%);
+    }
+  } @else {
+    color: $text-color-title;
+    background-color: $proboknow-color-orange;
+    &:hover {
+      background-color: lighten($proboknow-color-orange, 8%);
+    }
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+@mixin circle-number(
+  $fs: $fz20,
+  $fw: bold,
+  $va: 2px,
+  $lh: 1.4,
+  $w: 35px,
+  $h: 35px,
+  $mr: $space-third) {
+  width: $w;
+  height: $h;
+  display: inline-block;
+  text-align: center;
+  border: 2px solid;
+  line-height: $lh;
+  text-indent: -1px;
+  vertical-align: $va;
+  font-size: $fs;
+  font-weight: $fw;
+  margin-right: $mr;
+  border-radius: 50%;
+}
+
+@mixin navigation-first() {
+  border-radius: 13px;
+  overflow: hidden;
+  background-color: $bg-sec-nav-color-default;
+  @include breakpoint(medium) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  a {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 30px;
+    color: white;
+    transition: background-color .6s;
+    background-color: $bg-sec-nav-color-default;
+    display: block;
+    border-top:1px solid $bd-sec-nav-color;
+    position: relative;
+    @include breakpoint(medium) {
+      border-left: 1px solid $bd-sec-nav-color;
+      border-top:none;
+    }
+    @include breakpoint(large) {
+      min-width: 100px;
+    }
+    @include breakpoint(xlarge) {
+      min-width: 185px;
+      &:first-child {
+        min-width: 60px;
+      }
+    }
+    &:first-child {
+      border-left:none;
+      border-top:none;
+    }
+    &:hover {
+      background-color: $bg-sec-nav-color-active;
+    }
+    &.active {
+      background-color: $bg-sec-nav-color-active;
+    }
+    .notify {
+      position: absolute;
+      margin-top: -5px;
+      margin-left: 2px;
+    }
+  }
+}
+
+@mixin inputTypes($fz: $fz16){
+  input:not([type]),
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=url],
+  input[type=time],
+  input[type=date],
+  input[type=datetime],
+  input[type=datetime-local],
+  input[type=tel], input[type=number],
+  input[type=search],
+  textarea.materialize-textarea {
+    font-size: $fz;
+    @content
+  }
+}
