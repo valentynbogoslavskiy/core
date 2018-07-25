@@ -1,3 +1,243 @@
-header {
-  display: none;
+.page-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  nav {
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0 20px 0 30px;
+    transition: height 1s, background-color 1s;
+    .nav-wrapper {
+      .brand-logo {
+        font-size: 4rem;
+        .proboknow-orange {
+          color: $proboknow-color-orange;
+        }
+        .lowboknow-green {
+          color: $lowboknow-color-green;
+        }
+      }
+      .brands {
+        height: 100px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: height 1s, width 1s;
+        .active-brand {
+          a {
+            font-size: 4rem;
+            margin-right: $space-second;
+            line-height: 1;
+            display: block;
+            transition: font-size 1s;
+            .proboknow-orange {
+              color: $proboknow-color-orange;
+            }
+            .lowboknow-green {
+              color: $lowboknow-color-green;
+            }
+          }
+          img {
+            height: 34px;
+            vertical-align: 4px;
+            transition: height 1s;
+            @media (max-width: $bp-header) {
+              height: 20px;
+            }
+          }
+        }
+        .sister-brand {
+          button {
+            background-color: transparent;
+            border: 1px solid white;
+            height: auto;
+            font-weight: 700;
+            line-height: 1.2;
+            font-size: $fz13;
+            padding: 4px 8px;
+          }
+        }
+
+        @media (max-width: $bp-header) {
+          width: 300px;
+        }
+      }
+      .mobile-brands {
+        //this 76px may need to be adjusted based on padding etc
+        width: calc(100% - 76px);
+        display: inline-block;
+        font-size: 4rem;
+        img {
+          height: 34px;
+          transition: height 1s;
+        }
+        .proboknow-orange {
+          color: $proboknow-color-orange;
+        }
+        .lowboknow-green {
+          color: $lowboknow-color-green;
+        }
+      }
+      .right {
+        a {
+          font-weight: 700;
+        }
+      }
+      a {
+        color: white;
+        font-size: 1.3rem;
+        line-height: 10rem;
+        transition: line-height 1s, font-size 1s;
+        i {
+          font-size: 4rem;
+          line-height: 100px;
+          transition: line-height 1s, font-size 1s;
+        }
+      }
+      ul {
+        li {
+          height: 100px;
+
+          &.sign-up-link {
+            margin-left: $space-menu;
+            @media (max-width: $bp-header) {
+              margin-left: 5px;
+            }
+            a {
+              color: $proboknow-color-orange;
+            }
+            &.lowbo-sign-up {
+              a {
+                color: $lowboknow-color;
+              }
+
+            }
+          }
+          a {
+            color: white;
+            &.menu-item--disabled {
+              color: grey;
+              cursor: default;
+            }
+          }
+        }
+        .sign-up-link {
+          a {
+            padding-right: 0.5rem;
+          }
+        }
+        .sign-up-login-separator {
+          a {
+            padding-left: 0;
+            padding-right: 0;
+            cursor: none;
+
+            &:hover {
+              background-color: rgba(0, 0, 0, .0);
+            }
+          }
+        }
+
+        .login-link {
+          a {
+            padding-left: 5px;
+          }
+        }
+
+        .logout-link {
+          .chip {
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            height: auto;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            margin: 0;
+          }
+          .dropdown-content {
+            background-color: $bg-menu;
+            box-shadow: none;
+            margin-top: $height-header;
+            li {
+              margin: 0;
+              height: auto;
+              &:hover,
+              &.active,
+              &.selected {
+                background-color: darken($bg-menu, 1%);
+              }
+              a {
+                line-height: 3;
+              }
+            }
+          }
+        }
+      }
+      .side-nav {
+        z-index: 30;
+      }
+    }
+  }
+}
+
+.small-header {
+  nav {
+    height: 64px;
+    background-color: rgba(51, 51, 51, 0.9);
+    .nav-wrapper {
+      .brands {
+        height: 64px;
+        width: 330px;
+        .active-brand {
+          a {
+            font-size: 3rem;
+          }
+          img {
+            height: 20px;
+          }
+        }
+        .sister-brand {
+          font-size: 1.2rem;
+          transition: font-size 1s;
+        }
+      }
+      .mobile-brands {
+        img {
+          height: 20px;
+          vertical-align: 5px;
+        }
+      }
+      a {
+        font-size: 1.2rem;
+        line-height: 64px;
+        i {
+          font-size: 2rem;
+          line-height: 64px;
+        }
+      }
+    }
+  }
+}
+
+.progress {
+  &-fixed {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+.header-menu {
+  @media (max-width: $bp-header) {
+    li {
+      a {
+        padding: 0 8px;
+      }
+    }
+  }  
 }
