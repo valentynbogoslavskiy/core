@@ -1,12 +1,13 @@
 'use strict';
  
-var gulp       = require('gulp'),
-    sass       = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
-    uglify     = require('gulp-uglify'),
-	autoprefixer = require('gulp-autoprefixer'),
-	minifyCss  = require('gulp-minify-css'),
-    rename     = require('gulp-rename');
+var gulp       		= require('gulp'),
+    sass       		= require('gulp-sass'),
+    sourcemaps 		= require('gulp-sourcemaps'),
+    uglify     		= require('gulp-uglify'),
+		pump 					= require('pump'),
+		autoprefixer 	= require('gulp-autoprefixer'),
+		minifyCss  		= require('gulp-minify-css'),
+    rename     		= require('gulp-rename');
 	
 	
 gulp.task('sass', function () {
@@ -23,6 +24,18 @@ gulp.task('sass', function () {
 		.pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./css'));
 });
+
+gulp.task('compress', function (cb) {
+  pump([
+      gulp.src('js/*.js'),
+      uglify(),
+      rename("script.min.js"),
+      gulp.dest('./js')
+    ],
+    cb
+  );
+});
+
 gulp.task('sass:watch', function () {
     gulp.watch(['./sass/**/*.scss'], ['sass']);
 });
