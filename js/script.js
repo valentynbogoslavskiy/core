@@ -35,9 +35,9 @@ $(document).ready(function () {
     //end check small and large header
 
     //effect paralax
-    if ($('.slider').length ) {
+    if ($('.slider').length && $(window).height() > scroll) {
       $('.slider img').css({
-        '--y': (scroll + scroll/10) + 'px'
+        '--y': (scroll + scroll/15) + 'px'
       })
     }
     //end effect paralax
